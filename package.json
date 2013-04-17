@@ -1,13 +1,13 @@
 {
   "name": "semver-loose",
   "version": "0.1.0",
-  "description": "ERROR: No README.md file found!",
+  "description": "loose precision matching on semvers",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,9 @@
     "semver"
   ],
   "author": "Agile Diagnosis <hello@agilediagnosis.com>",
+  "contributors": ["jden <jason@denizac.org>"],
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "chai": "~1.5.0",
     "mocha": "~1.9.0"
   }
