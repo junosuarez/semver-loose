@@ -82,7 +82,7 @@ Corresponding to the respective segments as defined in the (semver spec)[http://
 
 `gte` is true if the semver is a range and should match other semvers which are greater than or equal to itself.
 
-### `sort: (a: Semver, b: Semver) => Number`
+### `sort: (a: Semver|String, b: Semver|String) => Number`
 
 Returns a negative if `a` is before `b`, 0 if they are sorted equivalent, and positive if `a` is after `b`. May be used as a sort function with (`Array.sort`)[https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/sort]
 

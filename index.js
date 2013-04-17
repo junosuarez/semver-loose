@@ -25,6 +25,9 @@ function compare(range, ver) {
 }
 
 function sort(semverA, semverB) {
+  if (typeof semverA === 'string') semverA = parse(semverA)
+  if (typeof semverB === 'string') semverB = parse(semverB)
+
   var ret = (semverA.major || 0) - (semverB.major || 0)
   if (ret) return ret;
 
@@ -70,3 +73,4 @@ function indexOf(array, predicate) {
 module.exports.match = match
 module.exports.parse = parse
 module.exports.sort = sort
+module.exports.compare = compare

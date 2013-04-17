@@ -67,6 +67,21 @@ describe('semver-loose', function () {
       sl.sort(sl.parse('1.8'), sl.parse('1.6.3')).should.be.above(0)
       sl.sort(sl.parse('1'), sl.parse('0.4.2')).should.be.above(0)
     })
+    it('strings', function () {
+      sl.sort('1.2', '1.2.1').should.be.below(0)
+      sl.sort('1.0.0', '1.2.1').should.be.below(0)
+      sl.sort('1.2.3', '2.2.1').should.be.below(0)
+      sl.sort('1.3.5', '1.3.7').should.be.below(0)
+
+      sl.sort('1.2', '1.2').should.equal(0)
+      sl.sort('1', '1.0.0').should.equal(0)
+      sl.sort('1.2.4', '1.2.4').should.equal(0)
+
+      sl.sort('0.4.5', '0.3.2').should.be.above(0)
+      sl.sort('1.8', '1.6.3').should.be.above(0)
+      sl.sort('1', '0.4.2').should.be.above(0)
+
+    })
   })
 
   describe('parse', function () {
