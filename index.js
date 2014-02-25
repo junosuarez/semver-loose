@@ -60,7 +60,7 @@ function parse(ver) {
 
 function parseIntOrDefault (val) {
   var i = parseInt(val)
-  return Number.isNaN(i) ? undefined : i
+  return isNaN(i) ? undefined : i
 }
 
 function indexOf(array, predicate) {
