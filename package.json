@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/AgileDiagnosis/semver-loose.git"
+    "url": "git://github.com/junosuarez/semver-loose.git"
   },
   "keywords": [
     "semver"
